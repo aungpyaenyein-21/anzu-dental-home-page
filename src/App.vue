@@ -1,32 +1,69 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <v-app style="position: relative;">
+    <div class="main-logo">
+      <v-img
+        src="	http://dentallounge.jp/site_anzu/wp-content/themes/anzu/images/logo.png"
+        width="300"
+      />
     </div>
-    <router-view/>
-  </div>
+
+    <div class="menu">
+      <v-dialog
+        v-model="menuDialog"
+        fullscreen
+        transition="dialog-bottom-transition"
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+            x-large
+          >
+            <v-icon>mdi-menu</v-icon>
+          </v-btn>
+        </template>
+        <v-card>
+          <p @click="menuDialog = false">hello</p>
+        </v-card>
+      </v-dialog>
+    </div>
+    
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  data: () => ({
+    menuDialog:false,
+  }),
+};
+</script>
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+<style scoped>
+.main-logo{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /* transform: translate(-10px,-10px); */
+}
+.menu{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+.close-menu{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
 }
 </style>
