@@ -128,6 +128,7 @@ export default {
     background-color: #efe7dd;
     opacity: 0;
     z-index: 0;
+    display: none ;
   }
   .menu-dialog ul{
       position: absolute;
