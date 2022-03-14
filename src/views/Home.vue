@@ -105,11 +105,6 @@
     fonst-style:normal;
     font-weight: 100;
   }
-  .container{
-    /* height: 100%;
-    width: 100%;
-     */
-  }
   .welcomeWarp{
     height: 100vh;
     position: relative;
