@@ -5,6 +5,7 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
+import "locomotive-scroll/src/locomotive-scroll.scss";
 
 new Vue({
   router,

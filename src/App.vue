@@ -39,6 +39,7 @@ export default {
     $route(newVal){
       if(newVal){
         this.closeMenuDialog()
+        // console.log('route change')
       }
     }
   },
@@ -82,6 +83,10 @@ export default {
 </script>
 
 <style scoped>
+  @font-face {
+    font-family: 'giaza';
+    src: url(./fonts/Giaza.otf);
+  }
   .nav-bar{
       position: fixed;
       width: 100%;
@@ -125,7 +130,8 @@ export default {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: #efe7dd;
+    /* background-color: #efe7dd; */
+    background-color: #F6F6F6;
     opacity: 0;
     z-index: 0;
     display: none ;
@@ -142,7 +148,7 @@ export default {
       justify-content: center;
   }
   .menu-dialog li{
-      font-size: 3rem;
+      font-size: 4rem;
       margin: 1rem 0;
       /* font-style: italic; */
       font-weight: bold;
@@ -150,23 +156,23 @@ export default {
       opacity: 0;
   }
   .menu-dialog a{
-      color: rgb(85, 44, 33);
+      color: #6D9886;
       text-decoration: none;
       text-transform: uppercase;
+      font-family: 'giaza';
   }
   .menu-dialog a:hover{
-            
-      font-size: 3.1rem;
-      transition: .3s ease-in-out;
+      font-size: 5rem;
+      transition: all 1s;
       position: relative; 
       top: -3px; 
       left: -3px; 
-      text-shadow: 1px 1px #ffffff, 
-                  2px 2px #ffffff, 
-                  3px 3px#ffffff, 
-                  4px 4px #ffffff, 
-                  5px 5px #ffffff, 
-                  6px 6px #ffffff;
+      text-shadow: 1px 1px black, 
+                  2px 2px black, 
+                  3px 3px black, 
+                  4px 4px black, 
+                  5px 5px black, 
+                  6px 6px black;
   }
 
 </style>
