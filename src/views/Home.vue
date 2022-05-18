@@ -8,7 +8,7 @@
       > 
         <h1 data-scroll="" data-scroll-speed="2" 
         :style="$vuetify.breakpoint.lg?'font-size: 5rem;line-height: 200px;':'font-size: 2.5rem;line-height: 100px;'"
-        >Welcome To The</h1>
+        >Welcome To</h1>
         <h1 data-scroll="" data-scroll-speed="2" 
         :style="$vuetify.breakpoint.lg?'font-size: 5rem;line-height: 200px;':'font-size: 2.5rem;line-height: 100px;'" 
         >AnzuDental</h1>
@@ -578,7 +578,7 @@
       class="waiting"
     >
       <div class="waiting-text"
-        :style="$vuetify.breakpoint.xs?'width:80%':''"
+        :style="$vuetify.breakpoint.xs?'width:90%':''"
       >お待ちしております。</div>
       <div class="spin">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2300 1000">
@@ -635,7 +635,18 @@
           this.scroller = new locomotiveScroll({
               el:  document.querySelector('.scroller'),
               smooth: true,
-              smoothMobile: true
+              mobile:{
+                inertia: 0.8,
+                smooth: true,
+                getDirection: true,
+                breakpoint:0,
+              },
+              tablet:{
+                inertia: 0.8,
+                smooth: true,
+                getDirection: true,
+                breakpoint:0,
+              }
           });
 
           const scroller = this.scroller
