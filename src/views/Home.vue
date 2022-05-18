@@ -636,13 +636,11 @@
               el:  document.querySelector('.scroller'),
               smooth: true,
               mobile:{
-                inertia: 0.8,
                 smooth: true,
                 getDirection: true,
                 breakpoint:0,
               },
               tablet:{
-                inertia: 0.8,
                 smooth: true,
                 getDirection: true,
                 breakpoint:0,
